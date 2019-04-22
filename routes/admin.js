@@ -31,6 +31,24 @@ router.get("/init",(req,res)=>{
 	})
 });
 */
+/*
+router.get("/init",(req,res)=>{
+	const users = [];
+	for(let i = 0;i<500;i++){
+		users.push({
+			username:'test'+i,
+			password:hmac('test'+i),
+			phone:'1899523'+parseInt(Math.random()*10000),
+			email:'test'+i+'@hongxiutianxiang.com'
+		})
+	}
+	UserModel.insertMany(users)
+	.then(result=>{
+		res.end('ok')
+	})
+});
+*/
+
 //用户登录
 router.post("/login",(req,res)=>{
 	let body = req.body;

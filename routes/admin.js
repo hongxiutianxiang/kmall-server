@@ -38,13 +38,13 @@ router.get("/init",(req,res)=>{
 		users.push({
 			username:'test'+i,
 			password:hmac('test'+i),
-			phone:'1899523'+parseInt(Math.random()*10000),
-			email:'test'+i+'@hongxiutianxiang.com'
+			phone:'1368182'+parseInt(Math.random()*10000),
+			email:'test'+i+'@kuazhu.com'
 		})
 	}
 	UserModel.insertMany(users)
 	.then(result=>{
-		res.end('ok')
+		res.send('ok')
 	})
 });
 */

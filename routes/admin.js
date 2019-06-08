@@ -18,14 +18,15 @@ const router = Router();
 router.get("/init",(req,res)=>{
 	//插入数据到数据库
 	new UserModel({
-		username:'admin',
-		password:hmac('admin'),
+		username:'admin2',
+		password:hmac('admin2'),
 		isAdmin:true
 	})
 	.save((err,newUser)=>{
 		if(!err){//插入成功
 			res.send('ok')
 		}else{
+			console.log('aa')
 			res.send('err')				
 		}
 	})
